@@ -9,5 +9,5 @@ def get_vat(payment, percent=18):
 		return "не могу посчитать"
     	
 
-result = get_vat(10)	
+result = get_vat(50, 34)	
 print(result)
