@@ -4,9 +4,18 @@ def greet_user(bot, update):
 	bot.sendMessage(update.message.chat_id, text='Давай общаться!')
 def show_error(bot, update, error):
     print('Update "{}" caused error "{}"'.format(update, error))
+
+   dialog = {"привет": "и тебе привет!", "как дела": "лучше всех", "пока":"увидимся"}
+def get_answer(key, chat):
+	return chat[key.lower()]
+key = input()
+print(get_answer("привет", dialog)) 
+
 def talk_to_me(bot, update):
-    print('Пришло сообщение: {}'.format(update.message.text))
-    bot.sendMessage(update.message.chat_id, update.message.text)
+    print("Пришло сообщение: " + update.message.text)
+    bot.sendMessage(update.message.chat_id, get_answer())
+
+   
 def main():
 	updater = Updater("302143395:AAECx2k80ruHuLhTYnYxj7w6lhpXUWqdYjQ")
 	dp = updater.dispatcher
@@ -17,4 +26,6 @@ def main():
 	updater.idle()
 if __name__== '__main__':
     main()
+
+
 
