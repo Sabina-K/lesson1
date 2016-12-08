@@ -5,15 +5,11 @@ def greet_user(bot, update):
 def show_error(bot, update, error):
     print('Update "{}" caused error "{}"'.format(update, error))
 
-   dialog = {"привет": "и тебе привет!", "как дела": "лучше всех", "пока":"увидимся"}
-def get_answer(key, chat):
-	return chat[key.lower()]
-key = input()
-print(get_answer("привет", dialog)) 
 
+dialog = {"привет": "и тебе привет!", "как дела": "лучше всех", "пока":"увидимся"}
 def talk_to_me(bot, update):
     print("Пришло сообщение: " + update.message.text)
-    bot.sendMessage(update.message.chat_id, get_answer())
+    bot.sendMessage(update.message.chat_id, chat[key.lower])
 
    
 def main():
