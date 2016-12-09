@@ -14,3 +14,12 @@ def ask_user(ans):
 			print("Ну и отлично!")
 			break
 ask_user("Как дела?")
+
+
+while True:
+		ans = input("Как дела? ")
+		if ans == "Хорошо":
+			print("Ну и отлично!")
+			break
+		
+ask_user(" ")
