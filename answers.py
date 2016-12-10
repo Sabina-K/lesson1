@@ -5,7 +5,8 @@ while True:
 	key = input()
 	if key == "Пока":
 		break
-	print(get_answer(key, dialog))
+	x=get_answer(key, dialog)
+	print(x)
 
     
 
